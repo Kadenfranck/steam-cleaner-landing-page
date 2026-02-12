@@ -10,7 +10,7 @@ import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const heroImageUrl = '/images/hero-clean-carpet.png';
+  const heroImageUrl = 'hero-clean-carpet.jpg';
 
   return (
     <div className="min-h-screen flex flex-col">
