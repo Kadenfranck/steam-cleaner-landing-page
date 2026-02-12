@@ -1,30 +1,25 @@
 
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Pricing from './components/Pricing';
-import ValueAdd from './components/ValueAdd';
-import Testimonials from './components/Testimonials';
-import HowItWorks from './components/HowItWorks';
-import CallToAction from './components/CallToAction';
+import HomePage from './components/HomePage';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const heroImageUrl = 'hero-clean-carpet.jpg';
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero imageUrl={heroImageUrl} isLoading={false} />
-        <Pricing />
-        <ValueAdd />
-        <Testimonials />
-        <HowItWorks />
-        <CallToAction />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

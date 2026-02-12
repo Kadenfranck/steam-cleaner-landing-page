@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -47,7 +48,15 @@ const Footer: React.FC = () => {
         
         <div className="pt-6 border-t border-gray-800 text-sm space-y-2">
           <p className="text-gray-500">*Pricing listed is "starting at" pricing. Final price depends on size, condition, and specific requirements.</p>
-          <p className="text-gray-600">© {new Date().getFullYear()} STEAM CLEANER SERVICE. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <p className="text-gray-600">© {new Date().getFullYear()} STEAM CLEANER SERVICE. All rights reserved.</p>
+            <Link
+              to="/privacy-policy"
+              className="text-gray-400 hover:text-[#FFB800] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
