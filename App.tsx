@@ -18,7 +18,45 @@ const App: React.FC = () => {
     const generateHeroImage = async () => {
       try {
         const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-        const prompt = `Ultra-realistic wide-angle photo of a bright, modern living room with freshly steam-cleaned beige carpet. Large floor-to-ceiling windows with sheer white curtains allow warm natural sunlight to stream in, casting long soft shadows across the carpet. Minimalist Scandinavian interior design: Light neutral color palette (cream, beige, soft gray), Modern light gray sofa with textured throw pillows, Natural wood coffee table with simple decor (books, small plant, vase), Accent chair with slim black metal frame, Soft area lighting with modern lamps. The carpet should look freshly cleaned, plush, bright, and soft, with visible sunlight highlighting the texture and cleanliness. Professional real estate photography, 24mm wide angle, HDR, 8K detail, no people, no clutter. Atmosphere: Calm, Airy, Clean, High-end, Inviting. --aspect 16:9`;
+        const prompt = `Ultra-realistic wide-angle photo of a bright, modern living room with freshly steam-cleaned beige carpet.
+
+Large floor-to-ceiling windows with sheer white curtains allow warm natural sunlight to stream in, casting long soft shadows across the carpet.
+
+Minimalist Scandinavian interior design:
+- Light neutral color palette (cream, beige, soft gray)
+- Modern light gray sofa with textured throw pillows
+- Natural wood coffee table with simple decor (books, small plant, vase)
+- Accent chair with slim black metal frame
+- Soft area lighting with modern lamps
+
+The carpet should look freshly cleaned, plush, bright, and soft, with visible sunlight highlighting the texture and cleanliness.
+
+Atmosphere:
+- Calm
+- Airy
+- Clean
+- High-end
+- Inviting
+
+Camera style:
+- Professional real estate photography
+- Wide angle lens (24mm)
+- High dynamic range
+- Ultra sharp
+- Natural lighting
+- 8K detail
+- No people
+- No clutter
+
+Composition:
+- Centered room view
+- Symmetrical balance
+- Strong sunlight beams across carpet
+- Clean modern aesthetic
+
+Designed specifically as a website hero image for a professional steam cleaning service.
+
+--aspect 16:9`;
         
         const response = await ai.models.generateContent({
           model: 'gemini-2.5-flash-image',
