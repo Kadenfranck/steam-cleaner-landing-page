@@ -1,10 +1,10 @@
 # Steam Cleaner Service Landing Page
 
-A modern, responsive landing page for a professional steam cleaning service serving the Greater Orlando and Kissimmee area. Built with React, TypeScript, and featuring AI-powered hero image generation using Google's Gemini API.
+A modern, responsive landing page for a professional steam cleaning service serving the Greater Orlando and Kissimmee area. Built with React, TypeScript, and Vite.
 
 ## Features
 
-- **AI-Generated Hero Images**: Dynamic room imagery using Google's Gemini 2.5 Flash Image model
+- **Professional Hero Image**: High-quality hero section showcasing clean, modern living spaces
 - **Responsive Design**: Mobile-first layout with Tailwind CSS
 - **Transparent Pricing**: Clear pricing for carpet, upholstery, and tile cleaning services
 - **Customer Testimonials**: Social proof section with client reviews
@@ -17,14 +17,12 @@ A modern, responsive landing page for a professional steam cleaning service serv
 - **Build Tool**: Vite 6.2.0
 - **Styling**: Tailwind CSS (via CDN)
 - **Icons**: lucide-react
-- **AI Integration**: Google Generative AI (@google/genai)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (v18 or higher recommended)
-- A Google Gemini API key ([Get one here](https://ai.google.dev/))
 
 ### Installation
 
@@ -39,19 +37,12 @@ A modern, responsive landing page for a professional steam cleaning service serv
    npm install
    ```
 
-3. Set up environment variables:
-   - Copy or rename `.env.local` if needed
-   - Add your Gemini API key:
-   ```
-   GEMINI_API_KEY=your_actual_api_key_here
-   ```
-
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Build for Production
 
@@ -65,9 +56,12 @@ The built files will be in the `dist` directory, ready for deployment.
 
 ```
 steam-cleaner-service-landing-page/
+├── public/
+│   └── images/         # Static assets
+│       └── hero-clean-carpet.png # Hero image
 ├── components/          # React components
 │   ├── Navbar.tsx      # Navigation bar
-│   ├── Hero.tsx        # Hero section with AI image
+│   ├── Hero.tsx        # Hero section
 │   ├── Pricing.tsx     # Pricing cards
 │   ├── ValueAdd.tsx    # Value propositions
 │   ├── Testimonials.tsx # Customer reviews
@@ -85,10 +79,10 @@ steam-cleaner-service-landing-page/
 
 To adapt this landing page for your own business:
 
-1. Update contact information in `components/Footer.tsx` and `components/Navbar.tsx`
-2. Modify pricing in `components/Pricing.tsx`
-3. Change testimonials in `components/Testimonials.tsx`
-4. Update the hero image prompt in `App.tsx` to match your business
+1. Replace the hero image in `public/images/hero-clean-carpet.png` with your own
+2. Update contact information in `components/Footer.tsx` and `components/Navbar.tsx`
+3. Modify pricing in `components/Pricing.tsx`
+4. Change testimonials in `components/Testimonials.tsx`
 5. Customize colors by modifying the Tailwind classes (current primary color: #FFB800)
 
 ## License
