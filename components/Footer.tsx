@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <div className="w-2 h-2 rounded-full bg-[#FFB800]"></div>
-                Serving Orlando and Lakeland FL and all of Orange, Osceola, and Polk Counties
+                Serving Orlando, Orange County, Osceola County, and Polk County
               </li>
             </ul>
           </div>
