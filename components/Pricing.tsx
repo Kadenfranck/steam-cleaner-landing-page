@@ -87,9 +87,10 @@ const Pricing: React.FC = () => {
           ))}
         </div>
         
-        <a 
-          href="tel:4077597208" 
+        <a
+          href="tel:4077597208"
           className="inline-flex items-center gap-3 bg-[#FFB800] hover:bg-[#e6a600] text-white px-12 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-amber-100 transition-all hover:scale-105 border-2 border-amber-600/20"
+          onClick={() => (window as any).gtag?.('event', 'conversion', { 'send_to': 'AW-451943092/Qxz_CN7H9oEELS1wNcB' })}
         >
           <Phone size={22} fill="currentColor" />
           Call Now

@@ -27,9 +27,10 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, isLoading }) => {
             </p>
             
             <div className="flex flex-wrap items-center gap-6 pt-2">
-              <a 
-                href="tel:4077597208" 
+              <a
+                href="tel:4077597208"
                 className="inline-flex items-center gap-3 bg-[#FFB800] hover:bg-[#e6a600] text-white px-10 py-5 rounded-2xl font-black text-lg shadow-xl shadow-amber-100 transition-all hover:-translate-y-1 border-2 border-amber-600/20"
+                onClick={() => (window as any).gtag?.('event', 'conversion', { 'send_to': 'AW-451943092/Qxz_CN7H9oEELS1wNcB' })}
               >
                 <Phone size={22} fill="currentColor" />
                 Call Now

@@ -19,9 +19,10 @@ const Navbar: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center">
-            <a 
-              href="tel:4077597208" 
+            <a
+              href="tel:4077597208"
               className="bg-[#FFB800] hover:bg-[#e6a600] transition-all hover:scale-105 text-white px-6 py-3 rounded-2xl flex items-center gap-2 font-extrabold text-lg shadow-xl shadow-amber-100 border-2 border-amber-600/20"
+              onClick={() => (window as any).gtag?.('event', 'conversion', { 'send_to': 'AW-451943092/Qxz_CN7H9oEELS1wNcB' })}
             >
               <Phone size={20} fill="currentColor" />
               (407) 759-7208
